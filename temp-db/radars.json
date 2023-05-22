@@ -1,0 +1,130 @@
+{
+"radars" : [
+  {
+    "id": 1,
+    "maxSpeed": 150.0,
+    "longitude": 10.0,
+    "latitude": 36.0,
+    "infractions": [
+    ]
+  },
+  {
+    "id": 2,
+    "maxSpeed": 101.0,
+    "longitude": 11.0,
+    "latitude": 37.0,
+    "infractions": [
+    ]
+  },
+  {
+    "id": 3,
+    "maxSpeed": 102.0,
+    "longitude": 12.0,
+    "latitude": 38.0,
+    "infractions": [
+      {
+        "id": 1,
+        "date": "2021-01-01",
+        "vehicleSpeed": 110.0,
+        "radarMaxSpeed": 100.0,
+        "fineAmount": 100.0,
+        "radarId": 3,
+        "vehicleId": 5,
+        "vehicle": {
+          "id": 5,
+          "regNumber": "ABC-9615.575455229562",
+          "brand": "Mercedes",
+          "fiscalPower": 8.152022,
+          "model": "model 73.3380907746199",
+          "owner": {
+            "id": 2,
+            "name": "Ahmed",
+            "birthDate": "Sat May 20 23:35:32 WEST 2023",
+            "email": "Ahmed@gmail.com"
+          }
+        },
+        "radar": null
+      },
+      {
+        "id": 2,
+        "date": "2021-01-01",
+        "vehicleSpeed": 120.0,
+        "radarMaxSpeed": 110.0,
+        "fineAmount": 110.0,
+        "radarId": 3,
+        "vehicleId": 5,
+        "vehicle": {
+          "id": 5,
+          "regNumber": "ABC-9615.575455229562",
+          "brand": "Mercedes",
+          "fiscalPower": 8.152022,
+          "model": "model 73.3380907746199",
+          "owner": {
+            "id": 2,
+            "name": "Ahmed",
+            "birthDate": "Sat May 20 23:35:32 WEST 2023",
+            "email": "Ahmed@gmail.com"
+          }
+        },
+        "radar": null
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "maxSpeed": 103.0,
+    "longitude": 13.0,
+    "latitude": 39.0,
+    "infractions": [
+    ]
+  },
+  {
+    "id": 5,
+    "maxSpeed": 104.0,
+    "longitude": 14.0,
+    "latitude": 40.0,
+    "infractions": [
+    ]
+  },
+  {
+    "id": 6,
+    "maxSpeed": 105.0,
+    "longitude": 15.0,
+    "latitude": 41.0,
+    "infractions": [
+    ]
+  },
+  {
+    "id": 7,
+    "maxSpeed": 106.0,
+    "longitude": 16.0,
+    "latitude": 42.0,
+    "infractions": [
+    ]
+  },
+  {
+    "id": 8,
+    "maxSpeed": 107.0,
+    "longitude": 17.0,
+    "latitude": 43.0,
+    "infractions": [
+    ]
+  },
+  {
+    "id": 9,
+    "maxSpeed": 108.0,
+    "longitude": 18.0,
+    "latitude": 44.0,
+    "infractions": [
+    ]
+  },
+  {
+    "id": 10,
+    "maxSpeed": 109.0,
+    "longitude": 19.0,
+    "latitude": 45.0,
+    "infractions": [
+    ]
+  }
+]
+}

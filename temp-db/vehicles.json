@@ -1,0 +1,197 @@
+[
+  {
+    "id": 1,
+    "regNumber": "ABC-4298.1611489440065",
+    "brand": "Clio",
+    "fiscalPower": 4.082493,
+    "model": "model 0.4483521963099313",
+    "owner": {
+      "id": 1,
+      "name": "Mustapha",
+      "birthDate": "Sat May 20 15:38:41 WEST 2023",
+      "email": "Mustapha@gmail.com"
+    }
+  },
+  {
+    "id": 2,
+    "regNumber": "ABC-5777.223105016773",
+    "brand": "Mercedes",
+    "fiscalPower": 6.0953016,
+    "model": "model 0.7534187782501811",
+    "owner": {
+      "id": 1,
+      "name": "Mustapha",
+      "birthDate": "Sat May 20 15:38:41 WEST 2023",
+      "email": "Mustapha@gmail.com"
+    }
+  },
+  {
+    "id": 3,
+    "regNumber": "ABC-6146.163751622364",
+    "brand": "BMW",
+    "fiscalPower": 5.213753,
+    "model": "model 63.1007595978983",
+    "owner": {
+      "id": 1,
+      "name": "Mustapha",
+      "birthDate": "Sat May 20 15:38:41 WEST 2023",
+      "email": "Mustapha@gmail.com"
+    }
+  },
+  {
+    "id": 4,
+    "regNumber": "ABC-4284.803491873476",
+    "brand": "Clio",
+    "fiscalPower": 0.003589606,
+    "model": "model 26.52404289231981",
+    "owner": {
+      "id": 2,
+      "name": "Ahmed",
+      "birthDate": "Sat May 20 15:38:42 WEST 2023",
+      "email": "Ahmed@gmail.com"
+    }
+  },
+  {
+    "id": 5,
+    "regNumber": "ABC-9322.685424325737",
+    "brand": "Mercedes",
+    "fiscalPower": 0.9909361,
+    "model": "model 45.56231602640592",
+    "owner": {
+      "id": 2,
+      "name": "Ahmed",
+      "birthDate": "Sat May 20 15:38:42 WEST 2023",
+      "email": "Ahmed@gmail.com"
+    }
+  },
+  {
+    "id": 6,
+    "regNumber": "ABC-6837.649629240809",
+    "brand": "BMW",
+    "fiscalPower": 0.6135041,
+    "model": "model 80.53172432422659",
+    "owner": {
+      "id": 2,
+      "name": "Ahmed",
+      "birthDate": "Sat May 20 15:38:42 WEST 2023",
+      "email": "Ahmed@gmail.com"
+    }
+  },
+  {
+    "id": 7,
+    "regNumber": "ABC-1991.0588710658817",
+    "brand": "Clio",
+    "fiscalPower": 4.5941052,
+    "model": "model 78.92688833024933",
+    "owner": {
+      "id": 3,
+      "name": "oussama",
+      "birthDate": "Sat May 20 15:38:42 WEST 2023",
+      "email": "oussama@gmail.com"
+    }
+  },
+  {
+    "id": 8,
+    "regNumber": "ABC-4198.198912388497",
+    "brand": "Mercedes",
+    "fiscalPower": 7.816194,
+    "model": "model 30.541403416964396",
+    "owner": {
+      "id": 3,
+      "name": "oussama",
+      "birthDate": "Sat May 20 15:38:42 WEST 2023",
+      "email": "oussama@gmail.com"
+    }
+  },
+  {
+    "id": 9,
+    "regNumber": "ABC-9560.732355375976",
+    "brand": "BMW",
+    "fiscalPower": 3.2686756,
+    "model": "model 55.73417029851434",
+    "owner": {
+      "id": 3,
+      "name": "oussama",
+      "birthDate": "Sat May 20 15:38:42 WEST 2023",
+      "email": "oussama@gmail.com"
+    }
+  },
+  {
+    "id": 10,
+    "regNumber": "ABC-5354.050671754909",
+    "brand": "Clio",
+    "fiscalPower": 6.88454,
+    "model": "model 3.4520936185357787",
+    "owner": {
+      "id": 4,
+      "name": "hind",
+      "birthDate": "Sat May 20 15:38:42 WEST 2023",
+      "email": "hind@gmail.com"
+    }
+  },
+  {
+    "id": 11,
+    "regNumber": "ABC-3774.6451772132395",
+    "brand": "Mercedes",
+    "fiscalPower": 3.2317147,
+    "model": "model 86.27132322327627",
+    "owner": {
+      "id": 4,
+      "name": "hind",
+      "birthDate": "Sat May 20 15:38:42 WEST 2023",
+      "email": "hind@gmail.com"
+    }
+  },
+  {
+    "id": 12,
+    "regNumber": "ABC-6773.139823646173",
+    "brand": "BMW",
+    "fiscalPower": 4.1569366,
+    "model": "model 34.84047456913205",
+    "owner": {
+      "id": 4,
+      "name": "hind",
+      "birthDate": "Sat May 20 15:38:42 WEST 2023",
+      "email": "hind@gmail.com"
+    }
+  },
+  {
+    "id": 13,
+    "regNumber": "ABC-2035.0796687046757",
+    "brand": "Clio",
+    "fiscalPower": 8.557328,
+    "model": "model 56.72825338390551",
+    "owner": {
+      "id": 5,
+      "name": "sanae",
+      "birthDate": "Sat May 20 15:38:42 WEST 2023",
+      "email": "sanae@gmail.com"
+    }
+  },
+  {
+    "id": 14,
+    "regNumber": "ABC-9080.452839222009",
+    "brand": "Mercedes",
+    "fiscalPower": 2.0663073,
+    "model": "model 53.32288590982442",
+    "owner": {
+      "id": 5,
+      "name": "sanae",
+      "birthDate": "Sat May 20 15:38:42 WEST 2023",
+      "email": "sanae@gmail.com"
+    }
+  },
+  {
+    "id": 15,
+    "regNumber": "ABC-1767.555785416951",
+    "brand": "BMW",
+    "fiscalPower": 9.878872,
+    "model": "model 15.319083120419542",
+    "owner": {
+      "id": 5,
+      "name": "sanae",
+      "birthDate": "Sat May 20 15:38:42 WEST 2023",
+      "email": "sanae@gmail.com"
+    }
+  }
+]
