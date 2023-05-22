@@ -1,0 +1,68 @@
+<div class="p-3">
+  <div class="card">
+    <div class="card-header">
+      <div class="">
+        <div class="d-flex justify-content-between">
+          <h4><i class="bi bi-speedometer2"></i> Radars</h4>
+          <!-- Add new radar -->
+          <div class="float-right">
+            <button class="btn btn-outline-success" (click)="openFormPopup()"><i class="bi bi-plus-circle"></i> Add radar</button>
+          <div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <table class="table">
+        <thead class="thead-dark text-center">
+        <tr>
+          <th>Id</th> <th>Maximum Speed</th> <th>Longitude</th> <th>Latitude</th> <th>Consult</th> <th>Delete</th>
+        </tr>
+        </thead>
+        <tbody class="text-center">
+        <tr *ngFor = "let radar of radars">
+          <td>{{radar.id}}</td>
+          <td>{{radar.maxSpeed}} KM</td>
+          <td>{{radar.longitude}}</td>
+          <td>{{radar.latitude}}</td>
+          <td><button class="btn btn-outline-primary" (click)="consultRadar(radar.id)"><i class="bi bi-search"></i></button></td>
+          <td><button class="btn btn-outline-danger" (click)="deleteRadar(radar.id)"><i class="bi bi-trash"></i></button></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- Popup with bootstrap -->
+<div class="popup card" *ngIf="isFormPopupOpen">
+  <div class="card-body">
+    <!-- Popup content with ability to add new radar -->
+    <h4><i class="bi bi-plus-circle"></i> Add new radar</h4>
+    <form class="row" [formGroup]="newRadarForm" (ngSubmit)="saveNewRadar()">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="maxSpeed">Maximum Speed</label>
+          <input type="text" class="form-control" id="maxSpeed" formControlName="maxSpeed">
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="longitude">Longitude</label>
+          <input type="text" class="form-control" id="longitude" formControlName="longitude">
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="latitude">Latitude</label>
+          <input type="text" class="form-control" id="latitude" formControlName="latitude">
+        </div>
+      </div>
+    </form>
+  </div>
+  <div class="card-footer bg-transparent">
+    <!-- Close the popup -->
+    <button class="btn btn-outline-primary" (click)="closeFormPopup()"><i class="bi bi-x-lg"></i> Close</button>
+    <!-- Add new radar -->
+    <button class="btn btn-outline-success ms-3" (click)="saveNewRadar()"><i class="bi bi-plus-circle"></i> Add</button>
+  </div>
+</div>

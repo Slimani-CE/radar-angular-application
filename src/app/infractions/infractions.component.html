@@ -1,0 +1,161 @@
+<div class="p-3">
+  <div class="card">
+    <div class="card-header">
+      <div class="">
+        <div class="d-flex justify-content-between">
+          <h4><i class="bi bi-database-fill"></i> Infractions</h4>
+          <!-- Add new radar -->
+          <div class="float-right">
+            <button class="btn btn-outline-success" (click)="openFormPopup()"><i class="bi bi-plus-circle"></i> Add infraction</button>
+          <div>
+        </div>
+      </div>
+    </div>
+    <div class="card-body">
+      <table class="table">
+        <thead class="thead-dark text-center">
+        <tr>
+          <th>Id</th> <th>Date</th> <th>Vehicle Speed</th> <th>Radar Max Speed</th> <th>Fine Amount</th> <th>Details</th> <th>Delete</th>
+        </tr>
+        </thead>
+        <tbody class="text-center">
+        <tr *ngFor = "let infraction of infractions">
+          <td>{{infraction.id}}</td>
+          <td>{{infraction.date}}</td>
+          <td>{{infraction.vehicleSpeed}} KM</td>
+          <td>{{infraction.radarMaxSpeed}} KM</td>
+          <td>{{infraction.fineAmount}} MAD</td>
+          <td><button class="btn btn-outline-primary" (click)="openPopup(infraction)"><i class="bi bi-search"></i></button></td>
+          <td><button class="btn btn-outline-danger" (click)="deleteRadar(infraction.id)"><i class="bi bi-trash"></i></button></td>
+        </tr>
+        </tbody>
+      </table>
+    </div>
+  </div>
+</div>
+
+<!-- Popup with bootstrap -->
+<div class="popup card" *ngIf="isPopupOpen && focusedInfraction != null">
+  <div class="card-body">
+    <!-- Popup content with ability to modify the infraction -->
+    <h4><i class="bi bi-exclamation-circle"></i> Infraction details</h4>
+    <div class="row">
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="infractionId">Id</label>
+          <input type="text" class="form-control" id="infractionId" [(ngModel)]="focusedInfraction.id" disabled>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="date">Date</label>
+          <input type="text" class="form-control" id="date" [(ngModel)]="focusedInfraction.date" disabled>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="vehicleSpeed">Vehicle speed</label>
+          <input type="text" class="form-control" id="vehicleSpeed" [(ngModel)]="focusedInfraction.vehicleSpeed" disabled>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="radarMaxSpeed">Radar Maximum speed</label>
+          <input type="text" class="form-control" id="radarMaxSpeed" [(ngModel)]="focusedInfraction.radarMaxSpeed" disabled>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="fineAmount">Fine amount</label>
+          <input type="text" class="form-control" id="fineAmount" [(ngModel)]="focusedInfraction.fineAmount" disabled>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="vehicleRegNumber">Registartion number</label>
+          <input type="text" class="form-control" id="vehicleRegNumber" [(ngModel)]="focusedInfraction.vehicle.regNumber" disabled>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="vehicleBrand">Brand</label>
+          <input type="text" class="form-control" id="vehicleBrand" [(ngModel)]="focusedInfraction.vehicle.brand" disabled>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="fiscalpower">Fiscal power</label>
+          <input type="text" class="form-control" id="fiscalpower" [(ngModel)]="focusedInfraction.vehicle.fiscalPower" disabled>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="model">Model</label>
+          <input type="text" class="form-control" id="model" [(ngModel)]="focusedInfraction.vehicle.model" disabled>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="ownerId">Owner Id</label>
+          <input type="text" class="form-control" id="ownerId" [(ngModel)]="focusedInfraction.vehicle.owner.id" disabled>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="ownerName">Owner name</label>
+          <input type="text" class="form-control" id="ownerName" [(ngModel)]="focusedInfraction.vehicle.owner.name" disabled>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="birthDate">Birth date</label>
+          <input type="text" class="form-control" id="birthDate" [(ngModel)]="focusedInfraction.vehicle.owner.birthDate" disabled>
+        </div>
+      </div>
+      <div class="col-md-6">
+        <div class="form-group">
+          <label for="email">Email</label>
+          <input type="text" class="form-control" id="email" [(ngModel)]="focusedInfraction.vehicle.owner.email" disabled>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="card-footer bg-transparent">
+    <!-- Close the popup -->
+    <button class="btn btn-outline-primary" (click)="closePopup()"><i class="bi bi-x"></i> Close</button>
+  </div>
+</div>
+
+    <!-- Popup with bootstrap -->
+    <div class="popup card" *ngIf="isFormPopupOpen">
+      <div class="card-body">
+        <!-- Popup content with ability to add new radar -->
+        <h4><i class="bi bi-plus-circle"></i> Add new infraction</h4>
+        <form class="row" [formGroup]="newInfractionForm" (ngSubmit)="saveNewInfraction()">
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="idRadar">Id radar</label>
+              <input type="text" class="form-control" id="idRadar" formControlName="radarId">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="idVehicle">Id vehicle</label>
+              <input type="text" class="form-control" id="idVehicle" formControlName="vehicleId">
+            </div>
+          </div>
+          <div class="col-md-6">
+            <div class="form-group">
+              <label for="vehicleSpeed1">Vehicle speed</label>
+              <input type="text" class="form-control" id="vehicleSpeed1" formControlName="vehicleSpeed">
+            </div>
+          </div>
+        </form>
+      </div>
+      <div class="card-footer bg-transparent">
+        <!-- Close the popup -->
+        <button class="btn btn-outline-primary" (click)="closeFormPopup()"><i class="bi bi-x-lg"></i> Close</button>
+        <!-- Add new radar -->
+        <button class="btn btn-outline-success ms-3" (click)="saveNewInfraction()"><i class="bi bi-plus-circle"></i> Add</button>
+      </div>
+    </div>
